@@ -11,7 +11,7 @@ export const SwatchesGroup = ({ onClick, onSwatchHover, group, active, swatchWid
         paddingBottom: '5px',
         width: swatchWidth ? swatchWidth : '40px',
         float: 'left',
-        marginRight: '10px',
+        marginRight: '5px',
       },
     },
   })
