@@ -9,7 +9,7 @@ export const SwatchesGroup = ({ onClick, onSwatchHover, group, active, swatchWid
     'default': {
       group: {
         paddingBottom: '5px',
-        width: '40px',
+        width: swatchWidth ? swatchWidth : '40px',
         float: 'left',
         marginRight: '10px',
       },
