@@ -6,12 +6,12 @@ import { Swatch } from '../common'
 import CheckIcon from '@icons/material/CheckIcon'
 
 export const SwatchesColor = ({ color, onClick = () => {}, onSwatchHover, first,
-  last, active }) => {
+  last, active, width, height }) => {
   const styles = reactCSS({
     'default': {
       color: {
-        width: '40px',
-        height: '24px',
+        width: width ? width : '40px',
+        height: height ? height : '24px',
         cursor: 'pointer',
         background: color,
         marginBottom: '1px',

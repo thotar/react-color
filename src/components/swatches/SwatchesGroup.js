@@ -4,11 +4,11 @@ import map from 'lodash/map'
 
 import SwatchesColor from './SwatchesColor'
 
-export const SwatchesGroup = ({ onClick, onSwatchHover, group, active }) => {
+export const SwatchesGroup = ({ onClick, onSwatchHover, group, active, swatchWidth, swatchHeight }) => {
   const styles = reactCSS({
     'default': {
       group: {
-        paddingBottom: '10px',
+        paddingBottom: '5px',
         width: '40px',
         float: 'left',
         marginRight: '10px',
@@ -27,6 +27,8 @@ export const SwatchesGroup = ({ onClick, onSwatchHover, group, active }) => {
           last={ i === group.length - 1 }
           onClick={ onClick }
           onSwatchHover={ onSwatchHover }
+          width={ swatchWidth }
+          height={ swatchHeight }
         />
       )) }
     </div>

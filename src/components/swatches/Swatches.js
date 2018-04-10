@@ -9,7 +9,7 @@ import { ColorWrap, Raised } from '../common'
 import SwatchesGroup from './SwatchesGroup'
 
 export const Swatches = ({ width, height, onChange, onSwatchHover, colors, hex,
-  className = '' }) => {
+  className = '', swatchWidth, swatchHeight}) => {
   const styles = reactCSS({
     'default': {
       picker: {
@@ -18,7 +18,7 @@ export const Swatches = ({ width, height, onChange, onSwatchHover, colors, hex,
       },
       overflow: {
         height,
-        overflowY: 'scroll',
+        overflowY: 'auto',
       },
       body: {
         padding: '16px 0 6px 16px',
@@ -48,6 +48,8 @@ export const Swatches = ({ width, height, onChange, onSwatchHover, colors, hex,
                 active={ hex }
                 onClick={ handleChange }
                 onSwatchHover={ onSwatchHover }
+                swatchWidth={ swatchWidth }
+                swatchHeight={ swatchHeight }
               />
             )) }
             <div style={ styles.clear } />
